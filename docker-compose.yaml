@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+    api:
+        build: "."
+        container_name: "api"
+        volumes: 
+            - .:/app/goapi
+        ports:
+            - "1212:1212"
+        entrypoint: go run main.go
